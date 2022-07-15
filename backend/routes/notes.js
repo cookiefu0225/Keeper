@@ -14,13 +14,12 @@ router.route("/")
     const   content = String(req.body.content);
 
     let newNote = new Note({
-        _id: Math.floor(Math.random() * 10000),
         title: title,
         content: content
     })
 
     newNote.save()
-        .then(() => res.json("New note added")) 
+        .then((note) => res.json(note._id))
         .catch(err => res.status(400).json(err));
 })
 .delete((req, res) => {
