@@ -44,15 +44,23 @@
     margin: 16px;
     float: left;
   }
-  .note h1 {
-    font-size: 1.1em;
+  .note input {
+    font-size: 1.25em;
     margin-bottom: 6px;
+    border: none;
+    font-family: inherit;
+    outline: none;
+    resize: none;
   }
-  .note p {
+  .note textarea {
     font-size: 1.1em;
     margin-bottom: 10px;
     white-space: pre-wrap;
     word-wrap: break-word;
+    border: none;
+    font-family: inherit;
+    outline: none;
+    resize: none;
   }
   
   .note button {

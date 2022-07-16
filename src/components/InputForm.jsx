@@ -10,6 +10,7 @@ function InputForm(props) {
 
     const       [isExpand, setExpand] = useState(false);
 
+    // Trigger the expanding input form effect
     function expand() {
         setExpand(true);
     }
@@ -25,6 +26,7 @@ function InputForm(props) {
         });
     }
 
+    // Add new note
     function submitNote() {
         props.addNote(newNote);
 
@@ -34,6 +36,7 @@ function InputForm(props) {
         })
     }
 
+    // Prevent refresh page when the add button is triggered
     function preventSubmit(event) {
         event.preventDefault();
     }

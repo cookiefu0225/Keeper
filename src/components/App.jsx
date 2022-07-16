@@ -9,6 +9,7 @@ import axios from "axios";
 function App() {
     const       [notes, setNotes] = useState([]);
 
+    // Get data from the database only once
     useEffect(() => {
         axios.get("http://localhost:8000")
             .then(res => {
@@ -25,6 +26,7 @@ function App() {
             });
     }, []);
 
+    // Add note into the database from the input form
     function addNote(newNote) {
         axios.post("http://localhost:8000", newNote)
             .then(res => {

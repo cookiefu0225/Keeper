@@ -3,6 +3,7 @@ import Note from "../models/note.model.js";
 
 const   router = express.Router();
 
+///////////////////////////////// RESTful API /////////////////////////////////
 router.route("/")
 .get((req, res) => {
     Note.find()
@@ -27,6 +28,8 @@ router.route("/")
         .then(() => res.json("Delete all notes"))
         .catch(err => res.status(400).json(err));
 });
+
+
 
 router.route("/:id")
 .get((req, res) => {
